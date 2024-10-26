@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FAQ</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style type="text/css">
+      body{
+        background: #eee;
+        padding-top: 20px;
+        font-family: monospace;
+      }
+      .header{
+        border-radius: 20px 20px 0px 0px;
+        padding: 10px 0px;
+        background: purple;
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .faq-item{
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+      .faq-body{
+        display: none;
+        margin-top: 30px;
+      }
+      .faq-wrapper{
+        width: 75%;
+        margin: 0 auto;
+      }
+      .faq-inner{
+        padding: 30px;
+        background: aliceblue;
+      }
+      .faq-plus{
+        float: right;
+        font-size: 1.4em;
+        line-height: 1em;
+        cursor: pointer;
+      }
+      hr{
+        background-color: #9b9b9b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="faq-wrapper">
+          <div class="header">
+            <h1>FAQs</h1>
+          </div>
+          <div class="faq-inner">
+            <div class="faq-item">
+              <h3>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                What is India's currency?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                The local currency is the Indian Rupee. One dollar is equivalent to 82.83 Rs . Note that credit and debit cards are widely accepted.
+              </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                Do I need a visa to enter the India?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                You’ll need to get a visa before travelling to India.Make sure you get the right visa for your travel and that it’s valid for the purpose and duration of your stay. If you enter India on the wrong visa, you could be detained on arrival and you may be deported and blacklisted, meaning that you cannot enter India again. Make sure you meet entry requirements
+              </div>
+            </div>
+            <hr>
+            <div class="faq-item">
+              <h3>
+                What kind of clothes should I pack?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                 India's weather is pretty warm, so if you're visiting during the summer, you'll need to pack light breathable clothing as possible as temperatures exceed 30 degrees Celsius. If you're visiting anytime between November and April, make sure to bring a light jacket as it gets a bit chilly in the evening.
+              </div>
+            </div>
+			<hr>
+            <div class="faq-item">
+              <h3>
+                What type is cloth is allowed for waterride?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Only Nylon fabric is allowed for waterride.So make sure to have one.
+              </div>
+            </div>
+			<hr>
+            <div class="faq-item">
+              <h3>
+                What are some useful numbers to keep in mind?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Police emergency:100; Ambulance:108.
+              </div>
+            </div>
+			<hr>
+            <div class="faq-item">
+              <h3>
+                Do people tip?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Tipping is commonly practised in the India, however it is not expected. Some places may add a service charge of 10% and a tourism fee of 6% to your bill.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(".faq-plus").on('click',function(){
+        $(this).parent().parent().find('.faq-body').slideToggle();
+      });
+    </script>
+  </body>
+
+</html>

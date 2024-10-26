@@ -1,0 +1,75 @@
+<?php
+session_start();
+error_reporting(0);
+include('includes/dbconnection.php');
+
+if(isset($_POST['login']))
+  {
+    $emailid=$_POST['emailid'];
+    $password=md5($_POST['password']);
+    $query=mysqli_query($con,"select ID from tbluser where  Email='$emailid' && Password='$password' ");
+    $ret=mysqli_fetch_array($query);
+    if($ret>0){
+      $_SESSION['uid']=$ret['ID'];
+     echo "<script type='text/javascript'> document.location ='userdashboard.php'; </script>";
+    }
+    else{
+    $msg="Invalid Details.";
+    }
+  }
+  ?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Theme Park Management System || Login Page</title>
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!----webfonts--->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<!---//webfonts--->  
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body id="login">
+  <div class="login-logo">
+    <a href="index.php"><strong style="color: black">Theme Park Management System</strong></a>
+  </div>
+  <h2 class="form-heading">login</h2>
+  <div class="app-cam">
+	  <form method="post">
+		<p style="font-size:16px; color:red" align="center"> <?php if($msg){
+    echo $msg;
+  }  ?> </p>
+    <input type="text" class="text" name="emailid" placeholder="Email Id" required="true">
+		<input type="password" name="password" class="text" placeholder="Password" required="true">
+		<div class="submit"><input type="submit"  value="Login" name="login"></div>
+		
+		<ul class="new">
+			<li class="new_left"><p><a href="forgot-password.php"><h4>Forgot Password ?</h4></a></p></li>
+			</li>
+			<div class="clearfix"></div>
+		</ul>
+    <ul class="new">
+      <li class="new_left"><p><a href="../index.html"><i class="fa fa-home"></i>Back to home
+</a></p></li>
+      </li>
+      <br>
+      <br>
+		<ul class="new">
+			<li class="new_left"><p><a href="registration.php"><h4>New User!!! Click Here to Signup</h4></a></p></li>
+			</li>
+			<div class="clearfix"></div>
+		</ul>
+	</form>
+  </div>
+   
+</body>
+</html>
+	
